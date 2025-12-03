@@ -1,0 +1,10 @@
+version: 3
+
+tasks:
+  package:
+    desc: Package
+    cmds:
+      - nfpm-helper build
+    env:
+      VERSION: 2.13.0
+      ARCHS: amd64

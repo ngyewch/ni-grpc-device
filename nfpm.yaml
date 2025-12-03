@@ -1,0 +1,28 @@
+name: ${NAME}
+arch: ${ARCH}
+version: ${VERSION}
+priority: optional
+maintainer: Nick Ng <ngyewch@gmail.com>
+description: |
+  gRPC server providing remote access to NI device driver APIs.
+homepage: https://github.com/ni/grpc-device
+license: MIT
+
+contents:
+  - src: ${ARCHIVE_DIR}/ni_grpc_device_server
+    dst: /usr/bin/ni_grpc_device_server
+    expand: true
+
+  - src: contents
+    dst: /
+    type: tree
+
+  - src: config/etc/ni/server_config.json
+    dst: /etc/ni/server_config.json
+    type: config
+
+scripts:
+  preinstall: scripts/preinstall.sh
+  postinstall: scripts/postinstall.sh
+  preremove: scripts/preremove.sh
+  postremove: scripts/postremove.sh

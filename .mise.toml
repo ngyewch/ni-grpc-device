@@ -1,0 +1,5 @@
+[tools]
+task = '3.45.5'
+nfpm = '2.44.0'
+act = '0.2.83'
+'ubi:ngyewch/nfpm-helper' = '0.10.1'

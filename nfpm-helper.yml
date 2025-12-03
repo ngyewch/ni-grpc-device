@@ -1,0 +1,8 @@
+name: ni-grpc-device-server
+download: 
+  url_template: https://github.com/ni/grpc-device/releases/download/v${VERSION}/${NAME}-linux-glibc2_31-${ARCH}.tar.gz
+outputs:
+  - arch: amd64
+    download:
+      env:
+        ARCH: x64

@@ -1,0 +1,13 @@
+[Unit]
+Description=gRPC server providing remote access to NI device driver APIs
+Documentation=https://github.com/ni/grpc-device
+
+[Service]
+Restart=on-failure
+User=ni
+Group=ni
+ExecStart=/usr/bin/ni_grpc_device_server /etc/ni/server_config.json
+TimeoutStopSec=20s
+
+[Install]
+WantedBy=multi-user.target
