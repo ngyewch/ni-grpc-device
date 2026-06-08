@@ -6,5 +6,5 @@ tasks:
     cmds:
       - nfpm-helper build
     env:
-      VERSION: 2.13.0
+      VERSION: 2.17.0
       ARCHS: amd64
